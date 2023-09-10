@@ -1,0 +1,29 @@
+{
+  "name": "pseudo-translate-icu",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/pseudo-translate-icu.cjs",
+  "module": "dist/pseudo-translate-icu.esm.js",
+  "browser": "dist/pseudo-translate-icu.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest __tests__/*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "babel-jest": "^29.6.4",
+    "eslint": "^8.49.0",
+    "jest": "^29.6.4",
+    "jest-cli": "^29.6.4",
+    "prettier": "^3.0.3",
+    "rollup": "^3.29.0"
+  },
+  "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^2.6.2"
+  }
+}
