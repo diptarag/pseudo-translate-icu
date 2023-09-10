@@ -1,11 +1,30 @@
 {
   "name": "pseudo-translate-icu",
   "version": "0.1.0",
+  "description": "Pseudo translate ICU message strings, objects or entire JSON file",
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "l10n",
+    "localization",
+    "pseudo-translation",
+    "pseudo-localization",
+    "icu",
+    "icu-messageformat",
+    "i18next",
+    "formatjs",
+    "intl-messageformat"
+  ],
+  "author": {
+    "name": "Diptarag Mukherjee",
+    "email": "diptarag@gmail.com"
+  },
   "license": "MIT",
   "type": "module",
   "main": "dist/pseudo-translate-icu.cjs",
   "module": "dist/pseudo-translate-icu.esm.js",
   "browser": "dist/pseudo-translate-icu.umd.js",
+  "files": ["dist"],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src/*",
