@@ -1,6 +1,6 @@
 import { ACCENTED_MAP, BIDI_MAP } from './characterMaps';
 
-function getTranslation (text, strategy) {
+function getTranslation(text, strategy) {
   const charMap = strategy === 'bidi' ? BIDI_MAP : ACCENTED_MAP;
   return text
     .split('')
@@ -31,7 +31,4 @@ function expandTextByPercentage(text, percentage) {
   return expandedText;
 }
 
-export {
-  getTranslation,
-  expandTextByPercentage
-};
+export { getTranslation, expandTextByPercentage };

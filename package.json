@@ -11,7 +11,7 @@
     "lint": "eslint src/*",
     "check-formatting": "prettier --list-different src/**/*.js",
     "format": "prettier --write src/**/*.js",
-    "test": ""
+    "test": "yarn run lint"
   },
   "devDependencies": {
     "@babel/core": "^7.22.17",
