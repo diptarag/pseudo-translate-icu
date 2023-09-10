@@ -17,7 +17,7 @@ function translateFromAST (elements, options) {
   for (const el of elements) {
     if (el.type === TYPE.literal) {
         el.value = translateText(el.value, options);
-    };
+    }
     if (el.options) {
         for (const [key, option] of Object.entries(el.options)) {
             el.options[key].value = translateFromAST(option.value, options);
