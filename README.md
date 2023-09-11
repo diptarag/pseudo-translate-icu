@@ -158,6 +158,11 @@ pseudoTranslate('Welcome to pseudo-translate-icu doc',
 // Output - ‮Mǝʅɔoɯǝ ʇo dsǝnpo-ʇɹɐusʅɐʇǝ-ıɔn poɔ‬
 ```
 
+### `i18nextTrans` - default (`false`)
+If you are using `react-i18next` with ICU, you will encounter situations where you need to externalize HTML elements. For react-i18next, the recommended method is [Trans component](https://react.i18next.com/latest/trans-component).
+But the resultant string of Trans component is not compatible with ICU parser. And you may recieve an error ```SyntaxError: UNMATCHED_CLOSING_TAG```
+To get around the problem, use the option ```i18nextTrans: true```.
+
 ## Credits
 
 * The accented & bidi strategy is picked from the [mozilla code](https://hg.mozilla.org/mozreview/gecko/rev/a96cf6ff334617c3d51e325ece5f27eaa0fefac9)
