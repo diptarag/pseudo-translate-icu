@@ -21,13 +21,6 @@ export default [
       globals: {
         fs: 'fs'
       }
-    }, {
-      name: 'pseudoTransleICU',
-      file: pkg.browser,
-      format: 'umd',
-      globals: {
-        fs: 'fs'
-      }
     }],
     plugins: [
       resolve(),

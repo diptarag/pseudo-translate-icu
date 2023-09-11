@@ -16,6 +16,7 @@ function translateText(text, options) {
   return translatedText;
 }
 
+// Credit - https://github.com/1stdibs/icu-pseudo-translate/blob/master/src/index.js
 function translateFromAST(elements, options) {
   for (const el of elements) {
     if (el.type === TYPE.literal) {
@@ -63,6 +64,18 @@ function transform(source, options) {
   }
 }
 
+/**
+ * Generate pseudo translation for a string or a JSON object
+ * @param {string|object} source a string or JSON object to generate pseudo translation
+ * @param {object} options options to configure pseudo translation
+ * @param {boolean} [options.enableMarker=true] enable markers around the translated text to indicate sentence boundary
+ * @param {string} [options.startMarker='['] start marker to prefix the translated text
+ * @param {string} [options.endMarker=']'] end marker to suffix the translated text
+ * @param {boolean} [options.expand=false] simulate expandsion of text by duplicating some words randomly
+ * @param {number} [options.expandPercentage=30] percentage expansion of translated text
+ * @param {accented|bidi} [options.strategy='accented'] strategy to follow while translating the text. Available strategies - accented & bidi (useful for RTL)
+ * @returns {string|object} Pseudo translated string or JSON object containing psuedo translated texts
+ */
 function pseudoTranslate(source, options = {}) {
   return transform(
     source,
@@ -72,7 +85,7 @@ function pseudoTranslate(source, options = {}) {
         enableMarker: true,
         startMarker: '[',
         endMarker: ']',
-        exapnd: false,
+        expand: false,
         expandPercentage: 30,
         strategy: 'accented'
       },
@@ -81,6 +94,18 @@ function pseudoTranslate(source, options = {}) {
   );
 }
 
+/**
+ * Generate pseudo translation for a JSON file
+ * @param {string} source JSON file path
+ * @param {object} options options to configure pseudo translation
+ * @param {boolean} [options.enableMarker=true] enable markers around the translated text to indicate sentence boundary
+ * @param {string} [options.startMarker='['] start marker to prefix the translated text
+ * @param {string} [options.endMarker=']'] end marker to suffix the translated text
+ * @param {boolean} [options.expand=false] simulate expandsion of text by duplicating some words randomly
+ * @param {number} [options.expandPercentage=30] percentage expansion of translated text
+ * @param {accented|bidi} [options.strategy='accented'] strategy to follow while translating the text. Available strategies - accented & bidi (useful for RTL)
+ * @returns {object} A JSON object containing psuedo translated texts
+ */
 function pseudoTranslateJsonFile(source, options) {
   const data = readFileSync(source, 'utf8');
   return pseudoTranslate(JSON.parse(data), options);

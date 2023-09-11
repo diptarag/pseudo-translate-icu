@@ -15,6 +15,13 @@
     "formatjs",
     "intl-messageformat"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diptarag/pseudo-translate-icu"
+  },
+  "bugs": {
+    "url": "https://github.com/diptarag/pseudo-translate-icu/issues"
+  },
   "author": {
     "name": "Diptarag Mukherjee",
     "email": "diptarag@gmail.com"
@@ -22,8 +29,7 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/pseudo-translate-icu.cjs",
-  "module": "dist/pseudo-translate-icu.esm.js",
-  "browser": "dist/pseudo-translate-icu.umd.js",
+  "module": "dist/pseudo-translate-icu.mjs",
   "files": ["dist"],
   "scripts": {
     "build": "rollup -c",
