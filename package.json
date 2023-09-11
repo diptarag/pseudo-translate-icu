@@ -1,6 +1,6 @@
 {
   "name": "pseudo-translate-icu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Pseudo translate ICU message strings, objects or entire JSON file",
   "keywords": [
     "i18n",
