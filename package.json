@@ -1,6 +1,6 @@
 {
   "name": "pseudo-translate-icu",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Pseudo translate ICU message strings, objects or entire JSON file",
   "keywords": [
     "i18n",
@@ -30,7 +30,9 @@
   "type": "module",
   "main": "dist/pseudo-translate-icu.cjs",
   "module": "dist/pseudo-translate-icu.mjs",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src/*",
@@ -44,10 +46,7 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
-    "babel-jest": "^29.6.4",
     "eslint": "^8.49.0",
-    "jest": "^29.6.4",
-    "jest-cli": "^29.6.4",
     "prettier": "^3.0.3",
     "rollup": "^3.29.0"
   },

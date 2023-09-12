@@ -102,6 +102,7 @@ function transform(source, options) {
  * @param {boolean} [options.expand=false] simulate expandsion of text by duplicating some words randomly
  * @param {number} [options.expandPercentage=30] percentage expansion of translated text
  * @param {accented|bidi} [options.strategy='accented'] strategy to follow while translating the text. Available strategies - accented & bidi (useful for RTL)
+ * @param {boolean} [options.i18nextTrans=false] if the string contains dynamic placeholders <0> <1> etc. Typically used when Trans component of react-i18next is used
  * @returns {string|object} Pseudo translated string or JSON object containing psuedo translated texts
  */
 function pseudoTranslate(source, options = {}) {
@@ -133,6 +134,7 @@ function pseudoTranslate(source, options = {}) {
  * @param {boolean} [options.expand=false] simulate expandsion of text by duplicating some words randomly
  * @param {number} [options.expandPercentage=30] percentage expansion of translated text
  * @param {accented|bidi} [options.strategy='accented'] strategy to follow while translating the text. Available strategies - accented & bidi (useful for RTL)
+ * @param {boolean} [options.i18nextTrans=false] if the string contains dynamic placeholders <0> <1> etc. Typically used when Trans component of react-i18next is used
  * @returns {object} A JSON object containing psuedo translated texts
  */
 function pseudoTranslateJsonFile(source, options) {
